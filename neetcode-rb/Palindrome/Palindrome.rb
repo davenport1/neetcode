@@ -1,9 +1,9 @@
 def is_palindrome(str)
-    str.downcase.delete(' ').gsub(/\W/, '')
-    j = str.length - 1
+    processed_str = str.downcase.delete(' ').gsub(/\W/, '')
+    j = processed_str.length - 1
 
-    (0..(str.length/2)).each do |i|
-       return false if str[i] != str[j -1]
+    (0..(processed_str.length/2)).each do |i|
+       return false if processed_str[i] != processed_str[j -1]
     end
 
     true
